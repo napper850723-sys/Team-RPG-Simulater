@@ -1,0 +1,150 @@
+{
+  "player": [
+    {
+      "name": "勇者",
+      "hp": 150,
+      "speed": 15,
+      "attack": 25,
+      "defense": 10,
+      "attackType": 2
+    },
+    {
+      "name": "法师",
+      "hp": 100,
+      "speed": 18,
+      "attack": 30,
+      "defense": 5,
+      "attackType": 2
+    },
+    {
+      "name": "骑士",
+      "hp": 180,
+      "speed": 12,
+      "attack": 20,
+      "defense": 15,
+      "attackType": 2
+    },
+    {
+      "name": "弓箭手",
+      "hp": 120,
+      "speed": 20,
+      "attack": 22,
+      "defense": 8,
+      "attackType": 2
+    },
+    {
+      "name": "牧师",
+      "hp": 110,
+      "speed": 16,
+      "attack": 15,
+      "defense": 7,
+      "attackType": 2
+    },
+    {
+      "name": "刺客",
+      "hp": 90,
+      "speed": 22,
+      "attack": 28,
+      "defense": 6,
+      "attackType": 2
+    },
+    {
+      "name": "战士",
+      "hp": 160,
+      "speed": 14,
+      "attack": 23,
+      "defense": 12,
+      "attackType": 2
+    },
+    {
+      "name": "巫师",
+      "hp": 95,
+      "speed": 17,
+      "attack": 27,
+      "defense": 4,
+      "attackType": 2
+    },
+    {
+      "name": "圣骑士",
+      "hp": 170,
+      "speed": 13,
+      "attack": 19,
+      "defense": 14,
+      "attackType": 2
+    }
+  ],
+  "enemy": [
+    {
+      "name": "哥布林",
+      "hp": 80,
+      "speed": 16,
+      "attack": 18,
+      "defense": 3,
+      "attackType": 2
+    },
+    {
+      "name": "兽人",
+      "hp": 120,
+      "speed": 13,
+      "attack": 22,
+      "defense": 8,
+      "attackType": 2
+    },
+    {
+      "name": "骷髅兵",
+      "hp": 90,
+      "speed": 15,
+      "attack": 16,
+      "defense": 5,
+      "attackType": 2
+    },
+    {
+      "name": "僵尸",
+      "hp": 110,
+      "speed": 10,
+      "attack": 19,
+      "defense": 6,
+      "attackType": 2
+    },
+    {
+      "name": "吸血鬼",
+      "hp": 100,
+      "speed": 19,
+      "attack": 21,
+      "defense": 4,
+      "attackType": 2
+    },
+    {
+      "name": "狼人",
+      "hp": 115,
+      "speed": 17,
+      "attack": 23,
+      "defense": 7,
+      "attackType": 2
+    },
+    {
+      "name": "石像鬼",
+      "hp": 130,
+      "speed": 12,
+      "attack": 17,
+      "defense": 10,
+      "attackType": 2
+    },
+    {
+      "name": "巫妖",
+      "hp": 95,
+      "speed": 18,
+      "attack": 25,
+      "defense": 3,
+      "attackType": 2
+    },
+    {
+      "name": "龙",
+      "hp": 150,
+      "speed": 14,
+      "attack": 28,
+      "defense": 12,
+      "attackType": 2
+    }
+  ]
+}

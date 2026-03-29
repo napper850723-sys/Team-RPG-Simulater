@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡牌游戏模拟器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>卡牌游戏模拟器</h1>
+        <p class="mode-indicator" id="mode-indicator"></p>
+        
+        <div class="battle-field">
+            <div class="player-side">
+                <h2>我方</h2>
+                <div class="character-grid" id="player-grid">
+                    <!-- 我方角色将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <div class="enemy-side">
+                <h2>敌方</h2>
+                <div class="character-grid" id="enemy-grid">
+                    <!-- 敌方角色将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <div class="battle-info">
+                <div class="turn-indicator">
+                    <h3>当前回合</h3>
+                    <div id="current-turn">准备开始</div>
+                </div>
+                <div class="action-log" id="action-log">
+                    <h3>战斗日志</h3>
+                    <ul id="log-list"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="back-to-home" class="back-btn">返回首页</button>
+            <button id="start-battle">开始战斗</button>
+            <button id="next-turn" disabled>下一回合</button>
+            <button id="auto-turn" disabled>自动执行</button>
+            <button id="back-to-select">重新选择</button>
+        </div>
+    </div>
+    <script src="skills.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

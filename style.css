@@ -616,12 +616,12 @@ button {
         padding: 0 5px !important;
     }
     
-    /* 强制3列布局 */
+    /* 强制2列布局，增加卡片宽度 */
     .player-side .character-grid, .enemy-side .character-grid {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: auto !important;
-        gap: 3px !important;
+        gap: 5px !important;
         padding: 0 5px !important;
         box-sizing: border-box !important;
         max-width: 100% !important;
@@ -640,11 +640,13 @@ button {
         min-width: unset !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 3px !important;
+        padding: 5px !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
         box-sizing: border-box !important;
+        height: auto !important;
+        min-height: 100px !important;
     }
     
     .character-left {
@@ -652,13 +654,14 @@ button {
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 2px !important;
+        gap: 4px !important;
         flex-shrink: 0 !important;
+        margin-bottom: 4px !important;
     }
     
     .character-right {
         width: 100% !important;
-        margin-top: 2px !important;
+        margin-top: 4px !important;
         max-width: 100% !important;
     }
     
@@ -668,13 +671,15 @@ button {
     }
     
     .character-name {
-        font-size: 6px !important;
+        font-size: 8px !important;
         font-weight: bold !important;
         text-align: center !important;
         max-width: 100% !important;
         overflow: hidden !important;
         word-wrap: break-word !important;
         white-space: normal !important;
+        line-height: 1.2 !important;
+        margin-bottom: 2px !important;
     }
     
     .character-stats {
@@ -846,13 +851,15 @@ button {
     }
     
     .character-name {
-        font-size: 4px !important;
+        font-size: 6px !important;
         font-weight: bold !important;
         text-align: center !important;
         max-width: 100% !important;
         overflow: hidden !important;
         word-wrap: break-word !important;
         white-space: normal !important;
+        line-height: 1.2 !important;
+        margin-bottom: 2px !important;
     }
     
     .character-stats {

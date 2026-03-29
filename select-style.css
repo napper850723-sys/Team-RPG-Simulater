@@ -416,4 +416,231 @@ h1 {
     .selected-slots {
         grid-template-columns: repeat(4, 1fr);
     }
+    
+    .selection-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .selection-status {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    #start-game {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* 手机竖屏模式 */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+    
+    .character-pool {
+        padding: 15px;
+    }
+    
+    .character-card {
+        min-width: 150px;
+        max-width: 100%;
+        padding: 6px;
+    }
+    
+    .character-left {
+        width: 50px;
+    }
+    
+    .character-image {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .character-name {
+        font-size: 9px;
+    }
+    
+    .character-hp {
+        font-size: 8px;
+    }
+    
+    .character-stats {
+        font-size: 9px;
+    }
+    
+    .skill-row {
+        font-size: 8px;
+        padding: 2px 4px;
+    }
+    
+    .selected-team {
+        padding: 15px;
+    }
+    
+    .selected-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .slot {
+        min-height: 70px;
+        padding: 8px;
+        font-size: 11px;
+    }
+    
+    .selected-char-image {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .selected-char-name {
+        font-size: 9px;
+    }
+    
+    .selected-char-hp {
+        font-size: 7px;
+    }
+    
+    .selected-char-stats {
+        font-size: 7px;
+    }
+    
+    .selected-skill {
+        font-size: 7px;
+        padding: 1px 3px;
+    }
+}
+
+/* 手机横屏模式 */
+@media (orientation: landscape) and (max-height: 500px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+    
+    .subtitle {
+        font-size: 0.8em;
+        margin-bottom: 12px;
+    }
+    
+    .selection-info {
+        padding: 10px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .selection-status {
+        gap: 15px;
+    }
+    
+    .selection-status span {
+        font-size: 14px;
+    }
+    
+    .back-btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    
+    #start-game {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .character-pool {
+        padding: 15px;
+    }
+    
+    .character-pool h2 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .character-card {
+        min-width: 140px;
+        padding: 6px;
+    }
+    
+    .character-left {
+        width: 45px;
+    }
+    
+    .character-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .character-name {
+        font-size: 8px;
+    }
+    
+    .character-hp {
+        font-size: 7px;
+    }
+    
+    .character-stats {
+        font-size: 8px;
+    }
+    
+    .skill-row {
+        font-size: 7px;
+        padding: 1px 3px;
+    }
+    
+    .selected-team {
+        padding: 15px;
+    }
+    
+    .selected-team h2 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .selected-slots {
+        gap: 8px;
+    }
+    
+    .slot {
+        min-height: 60px;
+        padding: 6px;
+        font-size: 10px;
+    }
+    
+    .selected-char-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .selected-char-name {
+        font-size: 8px;
+    }
+    
+    .selected-char-hp {
+        font-size: 6px;
+    }
+    
+    .selected-char-stats {
+        font-size: 6px;
+    }
+    
+    .selected-skill {
+        font-size: 6px;
+        padding: 1px 2px;
+    }
 }

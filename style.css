@@ -104,6 +104,12 @@ h1 {
     flex-shrink: 0;
 }
 
+.character-hp {
+    margin-top: 2px;
+    text-align: center;
+    width: 100%;
+}
+
 .character-divider {
     width: 1px;
     background-color: #bdc3c7;
@@ -437,5 +443,548 @@ button {
     
     .character-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 中等屏幕宽度 - 避免重叠 */
+@media (min-width: 769px) and (max-width: 1440px) {
+    .battle-field {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .player-side, .enemy-side, .battle-info {
+        width: 100%;
+        margin: 8px 0;
+    }
+    
+    .battle-info {
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .turn-indicator, .action-log {
+        flex: 1;
+    }
+    
+    .character-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .character-card {
+        min-width: 120px;
+        max-width: 100%;
+        padding: 6px;
+    }
+    
+    .character-left {
+        width: 50px;
+    }
+    
+    .character-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .character-name {
+        font-size: 8px;
+    }
+    
+    .character-hp {
+        font-size: 7px;
+    }
+    
+    .character-stats {
+        font-size: 7px;
+    }
+    
+    .skill-row {
+        font-size: 6px;
+        padding: 1px 3px;
+    }
+}
+
+/* 平板和大屏手机 */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+    }
+    
+    .mode-indicator {
+        margin-bottom: 20px;
+        font-size: 1em;
+    }
+    
+    .battle-field {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    /* 根据屏幕宽度调整列数 */
+    .character-grid {
+        gap: 8px;
+    }
+    
+    /* 400px以上显示3列 */
+    @media (min-width: 400px) {
+        .character-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    /* 400px以下显示2列 */
+    @media (max-width: 399px) {
+        .character-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    .character-card {
+        min-width: 100px;
+        max-width: 100%;
+        padding: 6px;
+    }
+    
+    .character-left {
+        width: 40px;
+    }
+    
+    .character-image {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .character-name {
+        font-size: 8px;
+    }
+    
+    .character-stats {
+        font-size: 7px;
+    }
+    
+    .skill-row {
+        font-size: 6px;
+        padding: 1px 3px;
+    }
+    
+    .game-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+/* 手机竖屏模式 */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    .game-container {
+        padding: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+    
+    h1 {
+        font-size: 1.2em !important;
+        margin-bottom: 3px !important;
+        padding: 0 5px !important;
+    }
+    
+    .mode-indicator {
+        margin-bottom: 8px !important;
+        font-size: 0.7em !important;
+        padding: 0 5px !important;
+    }
+    
+    .battle-field {
+        padding: 5px !important;
+        gap: 8px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .player-side h2, .enemy-side h2 {
+        font-size: 0.9em !important;
+        margin-bottom: 6px !important;
+        padding: 0 5px !important;
+    }
+    
+    /* 根据屏幕宽度调整列数 */
+    /* 400px以上显示3列 */
+    @media (min-width: 400px) {
+        .player-side .character-grid, .enemy-side .character-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 3px !important;
+            padding: 0 5px !important;
+            box-sizing: border-box !important;
+        }
+        
+        .player-side .character-card, .enemy-side .character-card {
+            min-width: unset !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 3px !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
+        }
+        
+        .character-left {
+            width: 100% !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 2px !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .character-right {
+            width: 100% !important;
+            margin-top: 2px !important;
+            max-width: 100% !important;
+        }
+    }
+    
+    /* 400px以下显示单列 */
+    @media (max-width: 399px) {
+        .player-side .character-grid, .enemy-side .character-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 3px !important;
+            padding: 0 5px !important;
+            box-sizing: border-box !important;
+        }
+        
+        .player-side .character-card, .enemy-side .character-card {
+            min-width: unset !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 3px !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            text-align: left !important;
+            box-sizing: border-box !important;
+        }
+        
+        .character-left {
+            width: 50px !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 2px !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .character-right {
+            flex: 1 !important;
+            margin-top: 0 !important;
+            max-width: calc(100% - 50px) !important;
+        }
+    }
+    
+    .character-image {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .character-name {
+        font-size: 6px !important;
+        font-weight: bold !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    
+    .character-stats {
+        font-size: 5px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 2px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        max-width: 100% !important;
+    }
+    
+    .character-stats > div {
+        margin-bottom: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    
+    .character-divider {
+        display: none !important;
+    }
+    
+    .character-hp {
+        font-size: 5px !important;
+        margin-bottom: 1px !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+    }
+    
+    .skill-row {
+        font-size: 4px !important;
+        padding: 1px 2px !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    .turn-indicator {
+        padding: 6px !important;
+        margin: 0 5px !important;
+    }
+    
+    .turn-indicator h3 {
+        font-size: 0.8em !important;
+        margin-bottom: 3px !important;
+    }
+    
+    #current-turn {
+        font-size: 12px !important;
+    }
+    
+    .action-log {
+        padding: 6px !important;
+        margin: 0 5px !important;
+    }
+    
+    .action-log h3 {
+        font-size: 0.8em !important;
+        margin-bottom: 3px !important;
+    }
+    
+    #log-list li {
+        font-size: 10px !important;
+    }
+    
+    .game-controls {
+        gap: 4px !important;
+        padding: 0 5px !important;
+        margin-top: 10px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    button {
+        padding: 4px 8px !important;
+        font-size: 10px !important;
+        flex: 1 !important;
+        min-width: 80px !important;
+    }
+}
+
+/* 手机横屏模式 - 强制布局 */
+@media only screen and (orientation: landscape) and (max-height: 500px) {
+    .game-container {
+        padding: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+    
+    h1 {
+        font-size: 1.1em !important;
+        margin-bottom: 2px !important;
+        padding: 0 5px !important;
+        text-align: center !important;
+    }
+    
+    .mode-indicator {
+        margin-bottom: 6px !important;
+        font-size: 0.6em !important;
+        padding: 0 5px !important;
+        text-align: center !important;
+    }
+    
+    .battle-field {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        padding: 4px !important;
+        gap: 6px !important;
+        min-height: 200px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .player-side, .enemy-side {
+        flex: 1 !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .player-side h2, .enemy-side h2 {
+        font-size: 0.8em !important;
+        margin-bottom: 4px !important;
+        padding: 0 5px !important;
+        text-align: center !important;
+    }
+    
+    /* 强制三列布局 */
+    .player-side .character-grid, .enemy-side .character-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2px !important;
+        padding: 0 3px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* 强制角色卡片占满宽度 */
+    .player-side .character-card, .enemy-side .character-card {
+        min-width: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 2px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    .character-left {
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 2px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .character-image {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    
+    .character-name {
+        font-size: 4px !important;
+        font-weight: bold !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    
+    .character-stats {
+        font-size: 3px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 2px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        max-width: 100% !important;
+        margin-top: 1px !important;
+    }
+    
+    .character-stats > div {
+        margin-bottom: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    
+    .character-divider {
+        display: none !important;
+    }
+    
+    .character-right {
+        width: 100% !important;
+        margin-top: 2px !important;
+        max-width: 100% !important;
+    }
+    
+    .character-hp {
+        font-size: 3px !important;
+        margin-bottom: 1px !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+    }
+    
+    .skill-row {
+        font-size: 3px !important;
+        padding: 1px 2px !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        margin-bottom: 1px !important;
+    }
+    
+    .battle-info {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 5px !important;
+        margin-top: 5px !important;
+    }
+    
+    .turn-indicator {
+        flex: 1 !important;
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+    
+    .turn-indicator h3 {
+        font-size: 0.7em !important;
+        margin-bottom: 2px !important;
+    }
+    
+    #current-turn {
+        font-size: 10px !important;
+    }
+    
+    .action-log {
+        flex: 1 !important;
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+    
+    .action-log h3 {
+        font-size: 0.7em !important;
+        margin-bottom: 2px !important;
+    }
+    
+    #log-list li {
+        font-size: 9px !important;
+    }
+    
+    .game-controls {
+        gap: 3px !important;
+        padding: 0 3px !important;
+        margin-top: 6px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    button {
+        padding: 3px 6px !important;
+        font-size: 9px !important;
+        flex: 1 !important;
+        min-width: 60px !important;
     }
 }

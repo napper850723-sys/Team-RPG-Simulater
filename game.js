@@ -258,7 +258,7 @@ class Game {
         const backHomeButton = document.getElementById('back-to-home');
         if (backHomeButton) {
             backHomeButton.addEventListener('click', () => {
-                window.location.href = 'home.html';
+                window.location.href = 'index.html';
             });
         }
         

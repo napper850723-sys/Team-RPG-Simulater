@@ -61,7 +61,7 @@ h1 {
 
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-content: center;
     justify-items: center;
@@ -620,8 +620,18 @@ button {
     .player-side .character-grid, .enemy-side .character-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: auto !important;
         gap: 3px !important;
         padding: 0 5px !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* 确保卡片不会超出宽度 */
+    .player-side .character-grid > div, .enemy-side .character-grid > div {
+        width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
     }
     

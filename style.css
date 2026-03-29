@@ -583,7 +583,7 @@ button {
 }
 
 /* 手机竖屏模式 */
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
     .game-container {
         padding: 0 !important;
         width: 100% !important;
@@ -616,79 +616,40 @@ button {
         padding: 0 5px !important;
     }
     
-    /* 根据屏幕宽度调整列数 */
-    /* 400px以上显示3列 */
-    @media (min-width: 400px) {
-        .player-side .character-grid, .enemy-side .character-grid {
-            display: grid !important;
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 3px !important;
-            padding: 0 5px !important;
-            box-sizing: border-box !important;
-        }
-        
-        .player-side .character-card, .enemy-side .character-card {
-            min-width: unset !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 3px !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            box-sizing: border-box !important;
-        }
-        
-        .character-left {
-            width: 100% !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            align-items: center !important;
-            gap: 2px !important;
-            flex-shrink: 0 !important;
-        }
-        
-        .character-right {
-            width: 100% !important;
-            margin-top: 2px !important;
-            max-width: 100% !important;
-        }
+    /* 强制3列布局 */
+    .player-side .character-grid, .enemy-side .character-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 3px !important;
+        padding: 0 5px !important;
+        box-sizing: border-box !important;
     }
     
-    /* 400px以下显示单列 */
-    @media (max-width: 399px) {
-        .player-side .character-grid, .enemy-side .character-grid {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 3px !important;
-            padding: 0 5px !important;
-            box-sizing: border-box !important;
-        }
-        
-        .player-side .character-card, .enemy-side .character-card {
-            min-width: unset !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 3px !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            text-align: left !important;
-            box-sizing: border-box !important;
-        }
-        
-        .character-left {
-            width: 50px !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            align-items: center !important;
-            gap: 2px !important;
-            flex-shrink: 0 !important;
-        }
-        
-        .character-right {
-            flex: 1 !important;
-            margin-top: 0 !important;
-            max-width: calc(100% - 50px) !important;
-        }
+    /* 强制角色卡片占满宽度 */
+    .player-side .character-card, .enemy-side .character-card {
+        min-width: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 3px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    .character-left {
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 2px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .character-right {
+        width: 100% !important;
+        margin-top: 2px !important;
+        max-width: 100% !important;
     }
     
     .character-image {

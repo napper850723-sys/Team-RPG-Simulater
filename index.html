@@ -4,61 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>卡牌游戏模拟器</title>
-    <link rel="stylesheet" href="select-style.css">
-    <!-- 添加重定向脚本 -->
-    <script>
-        // 自动重定向到 home.html
-        window.location.href = 'home.html';
-    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+        }
+
+        .mode-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .mode-btn {
+            padding: 40px 60px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .mode-btn-4v4 {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .mode-btn-4v4:hover {
+            background-color: #2980b9;
+        }
+
+        .mode-btn-1v1 {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .mode-btn-1v1:hover {
+            background-color: #d35400;
+        }
+
+        .mode-btn-4v4 {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .mode-btn-4v4:hover {
+            background-color: #2980b9;
+        }
+
+        .mode-btn-6v6 {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .mode-btn-6v6:hover {
+            background-color: #229954;
+        }
+
+        .mode-btn-9v9 {
+            background-color: #9b59b6;
+            color: white;
+        }
+
+        .mode-btn-9v9:hover {
+            background-color: #8e44ad;
+        }
+
+        .mode-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .mode-btn:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>卡牌游戏模拟器</h1>
-        <p class="subtitle" id="mode-subtitle">选择角色</p>
-        
-        <div class="selection-info">
-            <div class="selection-status">
-                <button id="back-to-home" class="back-btn">返回首页</button>
-                <span id="player-selected-count">我方: 0/4</span>
-                <span id="enemy-selected-count">敌方: 0/4</span>
-            </div>
-            <button id="start-game" disabled>开始游戏</button>
-        </div>
-        
-        <div class="pools-container">
-            <div class="character-pool">
-                <h2>我方角色池</h2>
-                <div class="character-grid" id="player-pool">
-                    <!-- 角色将通过JavaScript动态生成 -->
-                </div>
-            </div>
-            
-            <div class="character-pool enemy">
-                <h2>敌方角色池</h2>
-                <div class="character-grid" id="enemy-pool">
-                    <!-- 敌方角色将通过JavaScript动态生成 -->
-                </div>
-            </div>
-        </div>
-        
-        <div class="selected-teams">
-            <div class="selected-team">
-                <h2>我方队伍</h2>
-                <div class="selected-slots" id="player-selected-slots">
-                    <!-- 空位将通过JavaScript动态生成 -->
-                </div>
-            </div>
-            
-            <div class="selected-team enemy">
-                <h2>敌方队伍</h2>
-                <div class="selected-slots" id="enemy-selected-slots">
-                    <!-- 空位将通过JavaScript动态生成 -->
-                </div>
-            </div>
+        <div class="mode-buttons">
+            <button class="mode-btn mode-btn-1v1" onclick="selectMode(1)">
+                1V1 模式
+            </button>
+            <button class="mode-btn mode-btn-4v4" onclick="selectMode(4)">
+                4V4 模式
+            </button>
+            <button class="mode-btn mode-btn-6v6" onclick="selectMode(6)">
+                6V6 模式
+            </button>
+            <button class="mode-btn mode-btn-9v9" onclick="selectMode(9)">
+                9V9 模式
+            </button>
         </div>
     </div>
-    
-    <script src="skills.js"></script>
-    <script src="select.js"></script>
+
+    <script>
+        function selectMode(mode) {
+            localStorage.setItem('gameMode', mode);
+            window.location.href = 'select.html';
+        }
+    </script>
 </body>
 </html>

@@ -389,7 +389,7 @@ class CharacterSelect {
         const backBtn = document.getElementById('back-to-home');
         if (backBtn) {
             backBtn.addEventListener('click', () => {
-                window.location.href = 'home.html';
+                window.location.href = 'index.html';
             });
         }
     }

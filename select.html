@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡牌游戏模拟器</title>
+    <link rel="stylesheet" href="select-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>卡牌游戏模拟器</h1>
+        <p class="subtitle" id="mode-subtitle">选择角色</p>
+        
+        <div class="selection-info">
+            <div class="selection-status">
+                <button id="back-to-home" class="back-btn">返回首页</button>
+                <span id="player-selected-count">我方: 0/4</span>
+                <span id="enemy-selected-count">敌方: 0/4</span>
+            </div>
+            <button id="start-game" disabled>开始游戏</button>
+        </div>
+        
+        <div class="pools-container">
+            <div class="character-pool">
+                <h2>我方角色池</h2>
+                <div class="character-grid" id="player-pool">
+                    <!-- 角色将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <div class="character-pool enemy">
+                <h2>敌方角色池</h2>
+                <div class="character-grid" id="enemy-pool">
+                    <!-- 敌方角色将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="selected-teams">
+            <div class="selected-team">
+                <h2>我方队伍</h2>
+                <div class="selected-slots" id="player-selected-slots">
+                    <!-- 空位将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <div class="selected-team enemy">
+                <h2>敌方队伍</h2>
+                <div class="selected-slots" id="enemy-selected-slots">
+                    <!-- 空位将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="skills.js"></script>
+    <script src="select.js"></script>
+</body>
+</html>
